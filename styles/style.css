@@ -323,5 +323,5 @@ fieldset {
 
 .content__card:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
