@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: none;
-}
-
 html {
   block-size: 100%;
 }
@@ -20,8 +16,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  max-width: 1200px;
-  max-height: 800px;
   flex-grow: 1;
 }
 
@@ -52,6 +46,17 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.title {
+  padding-bottom: 19px;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-transform: uppercase;
 }
 
 .content {
@@ -85,6 +90,7 @@ ol {
   justify-content: space-between;
   min-width: 711px;
   padding-top: 5px;
+  align-items: end;
 }
 
 .search-form__fieldset {
@@ -163,13 +169,18 @@ fieldset {
   flex-direction: column;
   gap: 30px;
   position: relative;
-  height: 296px;
+  height: 304px;
   padding: 2px;
-  overflow-y: scroll; 
+  overflow-y: auto; 
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__details {
@@ -201,17 +212,6 @@ fieldset {
   line-height: 16.2px; /* 90% */
 }
 
-.title {
-  padding-bottom: 26px;
-  color: #FFF;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 70.5px;
-  text-transform: uppercase;
-}
-
 .content__accent {
   color: #545050;
   font-family: Oswald;
@@ -232,9 +232,6 @@ fieldset {
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 6px;
-  padding-top: 6px;
-  padding-left: -2px;
-  padding-right: 2px;
 }
 
 .content__video-card-description {
@@ -260,7 +257,6 @@ fieldset {
   line-height: normal;
   border: 1px solid white;
   align-items: end;
-  margin-top: 15px;
   cursor: pointer;
 }
 
@@ -315,13 +311,16 @@ fieldset {
   outline: 0;
 }
 
-.button:focus {
+.button:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;
 }
 
+.content__card-link:focus {
+  outline: 0;
+}
 
-.content__card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
