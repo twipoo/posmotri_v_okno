@@ -52,7 +52,7 @@ ol {
 .title {
   padding-bottom: 19px;
   color: #FFF;
-  font-family: Oswald;
+  font-family: 'Oswald' , 'sans-serif';
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -71,6 +71,8 @@ ol {
   display: flex;
   flex-wrap: wrap;
   padding-top: 78px;
+  max-width: 711px;
+  max-height: 386px;
 }
 
 .result__video {
@@ -224,7 +226,7 @@ fieldset {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: 'Oswald' , sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
